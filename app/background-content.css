@@ -1,0 +1,277 @@
+.titus-background-page .background-section {
+  scroll-margin-top: calc(46px + 4.35rem + 3.5rem);
+}
+
+.titus-background-page .background-section-body {
+  min-width: 0;
+}
+
+.titus-background-page .background-section-nav {
+  position: sticky;
+  top: calc(46px + 4.35rem);
+  z-index: 40;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid rgba(201, 164, 76, 0.18);
+  background: rgba(11, 31, 58, 0.96);
+  box-shadow: 0 18px 34px -30px rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(18px);
+}
+
+.titus-background-page .background-section-nav-scroll {
+  margin-top: 0;
+}
+
+.titus-background-page .background-section-nav a {
+  min-height: 2.5rem;
+  gap: 0.5rem;
+  border-color: rgba(216, 184, 102, 0.38);
+  background: rgba(18, 38, 63, 0.96);
+  color: #f3e8cc;
+  padding: 0 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.titus-background-page .background-section-nav a span {
+  color: #d8b866;
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.titus-background-page .background-section-nav a:hover,
+.titus-background-page .background-section-nav a:focus-visible {
+  border-color: rgba(216, 184, 102, 0.78);
+  background: rgba(201, 164, 76, 0.16);
+  color: #fff8e8;
+}
+
+.titus-background-page .background-section-nav a:focus-visible {
+  outline: 2px solid #d8b866;
+  outline-offset: 3px;
+}
+
+.titus-background-page .background-section-body > p strong {
+  color: #f3e8cc;
+  font-weight: 600;
+}
+
+.titus-background-page .background-section-body > p em,
+.background-data-table em {
+  color: #e0c37e;
+}
+
+.background-table-wrap {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin: 1.7rem 0 2rem;
+  overflow-x: auto;
+  border: 1px solid rgba(201, 164, 76, 0.22);
+  border-radius: 0.5rem;
+  background: rgba(18, 38, 63, 0.78);
+  box-shadow: 0 20px 60px -44px rgba(0, 0, 0, 0.82);
+  scrollbar-color: rgba(216, 184, 102, 0.55) rgba(8, 21, 33, 0.55);
+}
+
+.background-table-wrap:focus-visible {
+  outline: 2px solid #d8b866;
+  outline-offset: 3px;
+}
+
+.background-data-table {
+  width: 100%;
+  min-width: 44rem;
+  border-collapse: collapse;
+  color: #ece0c4;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.background-data-table th,
+.background-data-table td {
+  padding: 1rem 1.1rem;
+  border-right: 1px solid rgba(201, 164, 76, 0.14);
+  border-bottom: 1px solid rgba(201, 164, 76, 0.14);
+  text-align: left;
+  vertical-align: top;
+}
+
+.background-data-table th:last-child,
+.background-data-table td:last-child {
+  border-right: 0;
+}
+
+.background-data-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.background-data-table th {
+  background: rgba(201, 164, 76, 0.12);
+  color: #f3e8cc;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.background-data-table tbody tr:nth-child(even) {
+  background: rgba(8, 21, 33, 0.24);
+}
+
+.background-glance {
+  margin: 2.2rem 0 0;
+}
+
+.background-glance-table-wrap {
+  margin-top: 1rem;
+}
+
+.background-glance-table {
+  min-width: 40rem;
+}
+
+.background-glance-table td:first-child {
+  width: 10rem;
+  color: #f3e8cc;
+  font-weight: 600;
+}
+
+.background-timeline {
+  margin: 1.8rem 0 2.1rem;
+  border: 1px solid rgba(201, 164, 76, 0.22);
+  border-radius: 0.5rem;
+  background: rgba(18, 38, 63, 0.78);
+  padding: clamp(1.15rem, 2.5vw, 1.75rem);
+  box-shadow: 0 20px 60px -44px rgba(0, 0, 0, 0.82);
+}
+
+.background-structured-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.background-structured-heading > svg {
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+  color: #d8b866;
+}
+
+.background-structured-heading p {
+  margin: 0;
+  color: #d8b866;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.background-structured-heading h3 {
+  margin-top: 0.45rem;
+  color: #f3e8cc;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.background-chronology-note {
+  margin: 1rem 0 0 !important;
+  color: #b9ad90 !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.84rem !important;
+  line-height: 1.6 !important;
+}
+
+.background-timeline ol {
+  position: relative;
+  display: grid;
+  gap: 0;
+  margin: 1.6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.background-timeline ol::before {
+  content: "";
+  position: absolute;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  left: 9.9rem;
+  width: 1px;
+  background: rgba(201, 164, 76, 0.28);
+}
+
+.background-timeline li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 8.7rem minmax(0, 1fr);
+  gap: 2.4rem;
+  padding: 0.8rem 0;
+}
+
+.background-timeline li::before {
+  content: "";
+  position: absolute;
+  top: 1.25rem;
+  left: 9.63rem;
+  width: 0.58rem;
+  height: 0.58rem;
+  border: 2px solid #d8b866;
+  border-radius: 999px;
+  background: #0b1f3a;
+  box-shadow: 0 0 0 5px rgba(201, 164, 76, 0.08);
+}
+
+.background-timeline li > span {
+  color: #d8b866;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.background-timeline li > p {
+  margin: 0 !important;
+  color: #ece0c4 !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.94rem !important;
+  line-height: 1.65 !important;
+}
+
+.background-timeline li > p strong {
+  color: #f3e8cc;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .background-data-table {
+    min-width: 38rem;
+    font-size: 0.86rem;
+  }
+
+  .background-glance-table {
+    min-width: 34rem;
+  }
+
+  .background-timeline ol::before {
+    left: 0.32rem;
+  }
+
+  .background-timeline li {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    padding: 0.8rem 0 0.8rem 1.65rem;
+  }
+
+  .background-timeline li::before {
+    top: 1.2rem;
+    left: 0.05rem;
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "key": "titus",
+  "title": "Titus Study",
+  "domain": "titus.mybibleexplorer.com",
+  "totalVerses": 46,
+  "totalChapters": 3,
+  "books": [
+    {
+      "slug": "titus",
+      "name": "Titus",
+      "verseCounts": [
+        16,
+        15,
+        15
+      ]
+    }
+  ],
+  "backgroundSections": [
+    [
+      "pauline-authorship",
+      "Pauline Authorship"
+    ],
+    [
+      "date-and-place-of-writing",
+      "Date and Place of Writing"
+    ],
+    [
+      "the-island-of-crete",
+      "The Island of Crete"
+    ],
+    [
+      "titus-in-the-story-of-paul",
+      "Titus in the Story of Paul"
+    ],
+    [
+      "the-churches-of-crete",
+      "The Churches of Crete"
+    ],
+    [
+      "the-false-teachers",
+      "The False Teachers"
+    ],
+    [
+      "why-paul-wrote",
+      "Why Paul Wrote"
+    ],
+    [
+      "the-letter-at-a-glance",
+      "The Letter at a Glance"
+    ]
+  ],
+  "timelineSection": "titus-in-the-story-of-paul",
+  "finalSection": "the-letter-at-a-glance"
+}

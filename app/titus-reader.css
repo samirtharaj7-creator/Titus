@@ -1,0 +1,553 @@
+body[data-titus-route="commentary"] .exposition-card-blank {
+  display: flex;
+  min-height: clamp(24rem, 62vh, 42rem);
+  flex-direction: column;
+}
+
+body[data-titus-route="commentary"] .commentary-blank-space {
+  flex: 1;
+  min-height: 20rem;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(201, 164, 76, 0.14);
+  background:
+    repeating-linear-gradient(
+      180deg,
+      transparent 0,
+      transparent 2.65rem,
+      rgba(201, 164, 76, 0.09) 2.65rem,
+      rgba(201, 164, 76, 0.09) calc(2.65rem + 1px)
+    );
+}
+
+@media (max-width: 980px) {
+  body[data-titus-route="commentary"] .exposition-card-blank {
+    min-height: 24rem;
+  }
+}
+
+/* Compact chapter-and-verse navigator for the Titus reader. */
+.reader-page {
+  --chapter-strip-height: 3.35rem !important;
+}
+
+.mbe-ref-strip {
+  position: sticky !important;
+  top: calc(46px + 4rem) !important;
+  z-index: 55 !important;
+  display: flex !important;
+  min-height: 3.35rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-bottom: 1px solid rgba(201, 164, 76, 0.18) !important;
+  background: rgba(19, 45, 63, 0.94) !important;
+  padding: 0.35rem 0.75rem !important;
+  box-shadow: 0 16px 34px -34px rgba(0, 0, 0, 0.9) !important;
+  backdrop-filter: blur(14px) !important;
+}
+
+.mbe-ref-nav {
+  display: flex !important;
+  width: min(100%, 72rem) !important;
+  margin: 0 auto !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.45rem !important;
+}
+
+.mbe-ref-form {
+  position: relative !important;
+  display: inline-flex !important;
+  width: min(18.5rem, 42vw) !important;
+  min-width: 13rem !important;
+  max-width: 24rem !important;
+  height: 2.55rem !important;
+  flex: 1 1 18.5rem !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  border: 1px solid rgba(229, 205, 154, 0.22) !important;
+  border-radius: 0.4rem !important;
+  background: rgba(245, 234, 213, 0.08) !important;
+  padding: 0 0.72rem 0 0.55rem !important;
+  color: #f5ead5 !important;
+}
+
+.mbe-ref-form:focus-within {
+  border-color: rgba(229, 205, 154, 0.48) !important;
+  background: rgba(245, 234, 213, 0.12) !important;
+}
+
+.mbe-ref-badge {
+  display: inline-grid !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  flex: 0 0 auto !important;
+  place-items: center !important;
+  border-radius: 0.22rem !important;
+  background: #c9a44c !important;
+  color: #0b1f3a !important;
+  font-size: 0.48rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.mbe-ref-picker-toggle {
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  color: rgba(245, 234, 213, 0.7) !important;
+  cursor: pointer !important;
+}
+
+.mbe-ref-input {
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+  border: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  color: #f5ead5 !important;
+  font: 800 clamp(0.92rem, 1.5vw, 1.08rem) var(--font-sans, Inter, system-ui, sans-serif) !important;
+  letter-spacing: 0 !important;
+}
+
+.mbe-ref-input::placeholder {
+  color: rgba(245, 234, 213, 0.48) !important;
+}
+
+.mbe-ref-step,
+.mbe-ref-recent-toggle,
+.mbe-ref-all-toggle {
+  display: inline-flex !important;
+  min-width: 2.55rem !important;
+  height: 2.55rem !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(229, 205, 154, 0.18) !important;
+  border-radius: 0.4rem !important;
+  background: rgba(245, 234, 213, 0.07) !important;
+  padding: 0 0.78rem !important;
+  color: rgba(245, 234, 213, 0.72) !important;
+  font: 800 0.7rem var(--font-sans, Inter, system-ui, sans-serif) !important;
+  letter-spacing: 0.08em !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+}
+
+.mbe-ref-step {
+  width: 2.55rem !important;
+  padding: 0 !important;
+}
+
+.mbe-ref-step:hover,
+.mbe-ref-recent-toggle:hover,
+.mbe-ref-recent-toggle[aria-expanded="true"],
+.mbe-ref-all-toggle:hover,
+.mbe-ref-all-toggle[aria-expanded="true"] {
+  border-color: rgba(229, 205, 154, 0.32) !important;
+  background: #c9a44c !important;
+  color: #0b1f3a !important;
+}
+
+.mbe-ref-disabled {
+  opacity: 0.36 !important;
+  pointer-events: none !important;
+}
+
+.mbe-ref-icon {
+  width: 0.95rem !important;
+  height: 0.95rem !important;
+  fill: none !important;
+  stroke: currentcolor !important;
+  stroke-width: 2.2 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+.mbe-ref-menu-wrap {
+  position: relative !important;
+  flex: 0 0 auto !important;
+}
+
+.mbe-ref-picker,
+.mbe-ref-recent-dropdown,
+.mbe-ref-all-dropdown {
+  position: absolute !important;
+  top: calc(100% + 0.45rem) !important;
+  z-index: 120 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(229, 205, 154, 0.24) !important;
+  border-radius: 0.45rem !important;
+  background: rgba(11, 31, 58, 0.98) !important;
+  color: #f5ead5 !important;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.42) !important;
+}
+
+.mbe-ref-picker {
+  left: 50% !important;
+  display: flex !important;
+  max-height: min(32rem, calc(100dvh - 11.25rem)) !important;
+  flex-direction: column !important;
+  width: min(24rem, calc(100vw - 1.5rem)) !important;
+  transform: translateX(-50%) !important;
+}
+
+.mbe-ref-picker > .mbe-ref-grid {
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+}
+
+.mbe-ref-recent-dropdown,
+.mbe-ref-all-dropdown {
+  right: 0 !important;
+  width: min(15rem, calc(100vw - 1.5rem)) !important;
+}
+
+.mbe-ref-all-dropdown {
+  width: min(24rem, calc(100vw - 1.5rem)) !important;
+}
+
+.mbe-ref-picker[hidden],
+.mbe-ref-recent-dropdown[hidden],
+.mbe-ref-all-dropdown[hidden] {
+  display: none !important;
+}
+
+.mbe-ref-picker-head {
+  display: grid !important;
+  grid-template-columns: 1.8rem minmax(0, 1fr) auto 1.8rem !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  border-bottom: 1px solid rgba(229, 205, 154, 0.14) !important;
+  padding: 0.55rem 0.65rem !important;
+}
+
+.mbe-ref-picker-title {
+  color: #f5ead5 !important;
+  font: 800 clamp(0.9rem, 1.6vw, 1.08rem) var(--font-sans, Inter, system-ui, sans-serif) !important;
+  text-align: center !important;
+}
+
+.mbe-ref-back,
+.mbe-ref-close,
+.mbe-ref-go {
+  display: inline-grid !important;
+  min-width: 1.8rem !important;
+  height: 1.8rem !important;
+  place-items: center !important;
+  border: 0 !important;
+  border-radius: 0.35rem !important;
+  background: rgba(245, 234, 213, 0.08) !important;
+  color: rgba(245, 234, 213, 0.72) !important;
+  font: 800 0.72rem var(--font-sans, Inter, system-ui, sans-serif) !important;
+  cursor: pointer !important;
+}
+
+.mbe-ref-back[hidden] {
+  display: inline-grid !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.mbe-ref-close {
+  font-size: 1.32rem !important;
+  line-height: 1 !important;
+}
+
+.mbe-ref-go,
+.mbe-ref-back:hover,
+.mbe-ref-close:hover {
+  background: #c9a44c !important;
+  color: #0b1f3a !important;
+}
+
+.mbe-ref-grid,
+.mbe-ref-recent-list {
+  display: grid !important;
+  gap: 0.35rem !important;
+  padding: 0.75rem !important;
+}
+
+.mbe-ref-grid {
+  grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+}
+
+.mbe-ref-grid button,
+.mbe-ref-recent-list button,
+.mbe-ref-empty {
+  min-height: 1.7rem !important;
+  border: 0 !important;
+  border-radius: 0.35rem !important;
+  background: transparent !important;
+  color: rgba(245, 234, 213, 0.72) !important;
+  font: 800 clamp(0.72rem, 1vw, 0.88rem) var(--font-sans, Inter, system-ui, sans-serif) !important;
+  letter-spacing: 0 !important;
+}
+
+.mbe-ref-grid button,
+.mbe-ref-recent-list button {
+  cursor: pointer !important;
+}
+
+.mbe-ref-grid button:hover,
+.mbe-ref-grid button.is-active,
+.mbe-ref-recent-list button:hover {
+  background: #c9a44c !important;
+  color: #0b1f3a !important;
+}
+
+.mbe-ref-recent-list button,
+.mbe-ref-empty {
+  width: 100% !important;
+  padding: 0.55rem 0.65rem !important;
+  text-align: left !important;
+}
+
+.mbe-ref-empty {
+  margin: 0 !important;
+  color: rgba(245, 234, 213, 0.52) !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 760px) {
+  .mbe-ref-strip {
+    top: calc(46px + 3.75rem) !important;
+    padding: 0.25rem 0.45rem !important;
+  }
+
+  .mbe-ref-nav {
+    position: relative !important;
+    gap: 0.3rem !important;
+  }
+
+  .mbe-ref-form {
+    position: static !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: 2.35rem !important;
+    padding: 0 0.5rem 0 0.42rem !important;
+  }
+
+  .mbe-ref-input {
+    font-size: clamp(0.86rem, 4vw, 1rem) !important;
+  }
+
+  .mbe-ref-badge {
+    width: 1.32rem !important;
+    height: 1.32rem !important;
+    font-size: 0.42rem !important;
+  }
+
+  .mbe-ref-step,
+  .mbe-ref-recent-toggle,
+  .mbe-ref-all-toggle {
+    min-width: 2.35rem !important;
+    height: 2.35rem !important;
+    padding: 0 0.48rem !important;
+    font-size: 0.58rem !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .mbe-ref-picker {
+    position: absolute !important;
+    top: calc(100% + 0.45rem) !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: auto !important;
+    transform: none !important;
+  }
+
+  .mbe-ref-picker-head {
+    grid-template-columns: 1.65rem minmax(0, 1fr) auto 1.65rem !important;
+    padding: 0.45rem 0.5rem !important;
+  }
+
+  .mbe-ref-grid {
+    gap: 0.25rem !important;
+    padding: 0.5rem !important;
+  }
+
+  .mbe-ref-grid button {
+    min-height: 1.55rem !important;
+    font-size: 0.66rem !important;
+  }
+
+}
+
+/*
+ * The desktop reader is a self-contained workspace: Scripture and notes
+ * scroll inside their own panes. Prevent the outer document from continuing
+ * into the global footer and an empty body after those panes reach the end.
+ */
+@media (min-width: 981px) {
+  html:has(body > main.reader-page),
+  body:has(> main.reader-page) {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  body:has(> main.reader-page) > main.reader-page {
+    min-height: 0 !important;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  body:has(> main.reader-page) .mbe-ref-strip {
+    position: relative !important;
+    top: auto !important;
+  }
+
+  body:has(> main.reader-page) .split-reader {
+    height: calc(100dvh - 47px - 4.35rem - var(--chapter-strip-height)) !important;
+    min-height: 0 !important;
+  }
+
+  body.mbe-shell-managed[data-reader-footer-visible]:has(> .reader-header)
+    > main.reader-page:has(> .split-reader)
+    > .split-reader {
+    height: calc(
+      100dvh - 47px - 4.35rem - var(--chapter-strip-height) - var(--reader-footer-height, 10rem)
+    ) !important;
+  }
+
+  body:has(> main.reader-page) > .mbe-global-footer {
+    position: fixed;
+    z-index: 80;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block !important;
+    margin: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 160ms ease,
+      visibility 0s linear 160ms;
+  }
+
+  body[data-reader-footer-visible]:has(> main.reader-page) > .mbe-global-footer {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-delay: 0s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body:has(> main.reader-page) > .mbe-global-footer {
+      transition: none;
+    }
+  }
+}
+
+/* Inline verse-note disclosure for the one-column reader. */
+.mobile-verse-notes,
+.verse-dropdown-icon {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  body[data-titus-chapter] .commentary-pane {
+    display: none !important;
+  }
+
+  body[data-titus-chapter] .scripture-list-item {
+    gap: 0.5rem;
+  }
+
+  body[data-titus-chapter] .scripture-card {
+    position: relative !important;
+    padding-right: 2.75rem !important;
+    scroll-margin-top: calc(46px + 4rem + 3.35rem + 0.75rem);
+  }
+
+  body[data-titus-chapter] .verse-dropdown-icon {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.75rem;
+    display: block;
+    width: 1.15rem;
+    height: 1.15rem;
+    color: hsl(42 54% 64%);
+    opacity: 0.78;
+    transition: transform 160ms ease, opacity 160ms ease;
+  }
+
+  body[data-titus-chapter] .scripture-card[aria-expanded="true"] .verse-dropdown-icon {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+
+  body[data-titus-chapter] .mobile-verse-notes {
+    display: block;
+    margin: 0.15rem 0.25rem 0.75rem;
+    overflow: hidden;
+    border: 1px solid hsl(42 54% 54% / 0.5);
+    border-radius: 0.5rem;
+    background: hsl(213 34% 18%);
+    box-shadow: 0 12px 30px rgb(0 0 0 / 0.18);
+  }
+
+  body[data-titus-chapter] .mobile-verse-notes-toolbar {
+    display: flex;
+    min-height: 3.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 1px solid hsl(213 26% 30%);
+    background: hsl(213 42% 16%);
+    padding: 0.55rem 0.75rem;
+  }
+
+  body[data-titus-chapter] .mobile-verse-notes-toolbar .reader-pane-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  body[data-titus-chapter] .mobile-verse-notes-toolbar .reader-pane-controls {
+    flex: 0 0 auto;
+  }
+
+  body[data-titus-chapter] .mobile-verse-notes-body {
+    padding: 0.75rem;
+  }
+
+  body[data-titus-chapter] .mobile-verse-notes .exposition-card {
+    padding: 1rem !important;
+    border: 0 !important;
+    background: hsl(213 42% 16%) !important;
+    box-shadow: none !important;
+  }
+
+  body[data-titus-chapter] .mobile-verse-notes .verse-study-card {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body[data-titus-chapter] .mobile-verse-notes {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  body[data-titus-chapter] .mobile-verse-notes-body {
+    padding: 0.5rem;
+  }
+
+  body[data-titus-chapter] .mobile-verse-notes .exposition-card {
+    padding: 0.85rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-titus-chapter] .verse-dropdown-icon {
+    transition: none;
+  }
+}

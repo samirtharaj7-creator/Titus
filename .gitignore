@@ -1,0 +1,11 @@
+.DS_Store
+.next/
+node_modules
+.pnpm-store/
+out/
+outputs/
+*.tsbuildinfo
+__pycache__/
+
+# Local-only copyrighted research library and full-text index.
+.research/

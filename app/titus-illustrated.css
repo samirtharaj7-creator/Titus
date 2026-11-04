@@ -1,0 +1,2122 @@
+/*
+  Titus illustrated study theme.
+  Dark navy, warm gold, and serif-forward reading direction.
+*/
+
+:root,
+.dark {
+  --background: #0e1f34;
+  --background-rgb: 14 31 52;
+  --foreground: #efe7d7;
+  --foreground-rgb: 239 231 215;
+  --card: #18273a;
+  --card-rgb: 24 39 58;
+  --card-foreground: #efe6d5;
+  --card-foreground-rgb: 239 230 213;
+  --muted: #1e2c3e;
+  --muted-rgb: 30 44 62;
+  --muted-foreground: #beb39d;
+  --muted-foreground-rgb: 190 179 157;
+  --border: #334357;
+  --border-rgb: 51 67 87;
+  --primary: #c9a34a;
+  --primary-rgb: 201 163 74;
+  --primary-foreground: #0a1829;
+  --primary-foreground-rgb: 10 24 41;
+  --accent: #22364f;
+  --accent-rgb: 34 54 79;
+  --accent-foreground: #d2b36a;
+  --accent-foreground-rgb: 210 179 106;
+  --ring: #c9a34a;
+  --crimson: #c9a34a;
+  --radius: .5rem;
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "EB Garamond", Georgia, serif;
+  --font-display: "Cinzel", Georgia, serif;
+  --mbe-ink: #ece0c4;
+  --mbe-bg: #0e1f34;
+  --mbe-soft: #1e2c3e;
+  --mbe-muted: #beb39d;
+  --mbe-ivory: #18273a;
+  --mbe-rule: rgba(201, 164, 76, .18);
+  --mbe-navy: #ece0c4;
+  --mbe-gold-dark: #d2b36a;
+  --mbe-font-display: "Cinzel", Georgia, serif;
+  --mbe-font-reading: "EB Garamond", Georgia, serif;
+  --mbe-font-ui: "Jost", system-ui, sans-serif;
+}
+
+html,
+body,
+html.dark body,
+html.dark > body {
+  background:
+    linear-gradient(180deg, rgba(201, 164, 76, .08) 0%, rgba(201, 164, 76, 0) 18rem),
+    linear-gradient(180deg, #0d1c33 0%, #0b1f3a 54%, #081521 100%) !important;
+  color: var(--foreground) !important;
+}
+
+body {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  font-synthesis-weight: none;
+  background-attachment: fixed !important;
+}
+
+::selection {
+  background: rgba(201, 164, 76, .35);
+  color: #fff6e4;
+}
+
+h1,
+
+h2,
+
+.home-showcase-copy h1,
+
+.home-section-split h2,
+
+.scripture-pane-header h1 {
+  font-family: "Cinzel", Georgia, serif !important;
+  letter-spacing: .015em !important;
+  line-height: 1.12 !important;
+}
+
+h3,
+
+h4,
+
+.home-action-card strong,
+
+.home-chapter-group h3,
+
+.passage-outline-title,
+
+.exposition-card-heading h2,
+
+.verse-copy {
+  font-family: var(--font-serif), Georgia, serif !important;
+}
+
+.mbe-global-shell,
+.mbe-global-footer {
+  background: linear-gradient(180deg, #0e2138 0%, #0b1f3a 100%) !important;
+  border-color: rgba(201, 164, 76, .18) !important;
+  color: #b9ad90 !important;
+}
+
+.mbe-ribbon-brand {
+  color: #ece0c4 !important;
+}
+
+.mbe-ribbon-back::before {
+  background: rgba(201, 164, 76, .30) !important;
+}
+
+.mbe-ribbon-logo,
+.mbe-footer-logo {
+  filter: grayscale(1) brightness(0) invert(88%) sepia(18%) saturate(320%) hue-rotate(2deg);
+}
+
+.mbe-library-panel {
+  background: #12263f !important;
+  color: #ece0c4 !important;
+  border-color: rgba(201, 164, 76, .22) !important;
+  box-shadow: 0 26px 60px -30px rgba(0, 0, 0, .7) !important;
+}
+
+.mbe-library-item {
+  color: #ece0c4 !important;
+}
+
+.mbe-library-item:hover {
+  background: #17304c !important;
+}
+
+.mbe-library-item[aria-current="page"] {
+  background: rgba(201, 164, 76, .16) !important;
+}
+
+.mbe-library-name {
+  color: #f3e8cc !important;
+}
+
+.mbe-library-desc {
+  color: #b1a488 !important;
+}
+
+.mbe-footer-link {
+  color: #e0c37e !important;
+  border-bottom-color: rgba(201, 164, 76, .45) !important;
+}
+
+.mbe-footer-link:hover {
+  color: #fff2d4 !important;
+  border-bottom-color: #e0c37e !important;
+}
+
+body > #root:empty::before {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .12), rgba(255, 255, 255, .05)) 0 0 / 220% 100%,
+    linear-gradient(180deg, #0e2138 0%, #0b1f3a 100%) !important;
+  border-color: rgba(201, 164, 76, .18) !important;
+}
+
+.reader-header {
+  min-height: 4.35rem !important;
+  border-bottom: 1px solid rgba(201, 164, 76, .18) !important;
+  background: linear-gradient(180deg, rgba(14, 33, 56, .96), rgba(11, 31, 58, .96)) !important;
+  color: #ece0c4 !important;
+  box-shadow: 0 18px 44px -36px rgba(0, 0, 0, .82) !important;
+  backdrop-filter: blur(18px);
+}
+
+.reader-logo {
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+  border: 1px solid rgba(201, 164, 76, .35) !important;
+  border-radius: .5rem !important;
+  background: rgba(201, 164, 76, .12) !important;
+  color: #d8b866 !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .24) !important;
+}
+
+.reader-brand-text {
+  color: #f3e8cc !important;
+  font-family: "Cinzel", Georgia, serif !important;
+  font-size: .78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+}
+
+.reader-nav {
+  gap: clamp(1.5rem, 3.3vw, 3.2rem) !important;
+}
+
+.reader-menu-link,
+.reader-nav-link {
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #b9ad90 !important;
+  font-family: var(--font-sans), system-ui, sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .2em !important;
+  opacity: .56 !important;
+  padding: 0 !important;
+  text-transform: uppercase !important;
+}
+
+.reader-menu-link:hover,
+.reader-menu-link-active,
+.reader-nav-link:hover,
+.reader-nav-link-active,
+.dark .reader-nav-link-active,
+.dark .reader-menu-link-active {
+  background: transparent !important;
+  color: #fff2d4 !important;
+  opacity: 1 !important;
+}
+
+.home-showcase,
+
+.reader-page,
+
+.background-shell {
+  background:
+    linear-gradient(90deg, rgba(201, 164, 76, .05) 0 1px, transparent 1px),
+    linear-gradient(180deg, rgba(14, 33, 56, .96), rgba(8, 21, 33, .98)) !important;
+  background-size: 54px 100%, 100% 100% !important;
+}
+
+.home-showcase-hero {
+  min-height: clamp(29rem, 60vh, 38rem) !important;
+  padding-top: clamp(2.75rem, 5vh, 4rem) !important;
+}
+
+body[data-titus-route="home"] .home-showcase {
+  background: linear-gradient(180deg, #0b1f3a 0%, #0e2138 44%, #0b1f3a 100%) !important;
+  background-size: 100% 100% !important;
+  padding-top: 0 !important;
+}
+
+html.dark body[data-titus-route="home"] .home-showcase,
+html.dark body[data-titus-route="home"] .home-showcase-shell {
+  background: linear-gradient(180deg, #0b1f3a 0%, #0e2138 44%, #0b1f3a 100%) !important;
+  background-size: 100% 100% !important;
+}
+
+body[data-titus-route="home"] .home-showcase-shell {
+  width: 100% !important;
+  max-width: none !important;
+  padding-inline: 0 !important;
+}
+
+body[data-titus-route="home"] .home-showcase-hero {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden !important;
+  min-height: clamp(34rem, 68vh, 46rem) !important;
+  margin: 0 !important;
+  padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 6vw, 6.5rem) clamp(3rem, 6vw, 5rem) !important;
+  border-bottom: 0 !important;
+  background: #0b1f3a !important;
+}
+
+body[data-titus-route="home"] .home-showcase-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("/assets/titus-hero-engraving.webp?v=mbe-20261104-1") center top / cover no-repeat;
+  filter: saturate(.86) contrast(1.08);
+  opacity: .96;
+}
+
+body[data-titus-route="home"] .home-showcase-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(11, 31, 58, .03) 0%, rgba(11, 31, 58, .32) 57%, rgba(11, 31, 58, .72) 82%, rgba(11, 31, 58, .92) 94%, #0b1f3a 100%),
+    radial-gradient(circle at 80% 28%, rgba(216, 184, 102, .18), rgba(216, 184, 102, 0) 28rem),
+    linear-gradient(90deg, rgba(8, 21, 33, .98) 0%, rgba(8, 21, 33, .86) 30%, rgba(8, 21, 33, .42) 62%, rgba(8, 21, 33, .72) 100%);
+}
+
+body[data-titus-route="home"] .home-action-grid,
+body[data-titus-route="home"] .home-chapter-study {
+  width: min(calc(100% - clamp(2rem, 8vw, 6rem)), 92rem) !important;
+  margin-inline: auto !important;
+}
+
+body[data-titus-route="home"] .home-action-grid {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(-3rem, -3vw, -1.75rem) !important;
+}
+
+body[data-titus-route="home"] .home-section-split {
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: clamp(1rem, 2vw, 1.5rem) !important;
+  align-items: start !important;
+}
+
+body[data-titus-route="home"] .home-section-split > div,
+body[data-titus-route="home"] #home-chapter-title {
+  width: 100%;
+  max-width: none;
+}
+
+body[data-titus-route="home"] #home-chapter-title {
+  font-size: clamp(1.75rem, 3vw, 3.25rem) !important;
+  line-height: 1.08 !important;
+}
+
+body[data-titus-route="home"] .home-section-split > p {
+  max-width: 72rem;
+}
+
+body[data-titus-route="home"] .home-showcase-copy {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 16px 34px rgba(0, 0, 0, .55);
+}
+
+body[data-titus-route="introduction"] .background-hero {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: clamp(30rem, 58vh, 42rem) !important;
+  padding: clamp(4rem, 7vw, 6.5rem) clamp(2rem, 6vw, 5.5rem) !important;
+  border-bottom: 1px solid rgba(201, 164, 76, .18) !important;
+  background: #0b1f3a !important;
+}
+
+body[data-titus-route="introduction"] .background-hero::before {
+  content: "";
+  position: absolute;
+  inset: -4rem -1.5rem -1.5rem;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, rgba(11, 31, 58, .94) 0%, rgba(11, 31, 58, .72) 38%, rgba(11, 31, 58, .2) 72%, rgba(11, 31, 58, .08) 100%),
+    linear-gradient(180deg, rgba(11, 31, 58, .18) 0%, rgba(11, 31, 58, .2) 42%, rgba(11, 31, 58, .62) 78%, rgba(8, 21, 33, .96) 100%),
+    url("/assets/titus-hero-engraving.webp?v=mbe-20261104-1");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .76;
+  transform: scale(1.025);
+  transform-origin: center top;
+  filter: saturate(.86) contrast(.96) brightness(.86);
+}
+
+body[data-titus-route="introduction"] .background-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 16% 56%, rgba(11, 31, 58, .96) 0%, rgba(11, 31, 58, .7) 34%, transparent 62%),
+    radial-gradient(ellipse at 74% 24%, rgba(201, 164, 76, .09) 0%, transparent 42%),
+    linear-gradient(90deg, rgba(11, 31, 58, .86) 0%, rgba(11, 31, 58, .36) 42%, rgba(11, 31, 58, .12) 100%),
+    linear-gradient(180deg, rgba(5, 15, 28, .08) 0%, rgba(5, 15, 28, 0) 34%, rgba(8, 21, 33, .34) 76%, #081521 100%);
+}
+
+body[data-titus-route="introduction"] .background-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+body[data-titus-route="introduction"] .background-hero-copy {
+  width: 100% !important;
+  max-width: 100rem !important;
+  margin: 0 auto !important;
+  padding: clamp(1.25rem, 3vw, 2.25rem) 0 !important;
+}
+
+body[data-titus-route="introduction"] .background-introduction-title {
+  max-width: min(100%, 72rem) !important;
+  margin: 0 !important;
+  color: #f3e8cc !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 18px 42px rgba(0, 0, 0, .34);
+}
+
+body[data-titus-route="introduction"] .background-introduction-prefix,
+body[data-titus-route="introduction"] .background-introduction-book {
+  display: block;
+}
+
+body[data-titus-route="introduction"] .background-introduction-prefix {
+  margin-bottom: 1.125rem;
+  color: #d8b866;
+  font-family: "Jost", system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: .18em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+body[data-titus-route="introduction"] .background-introduction-book {
+  color: #f3e8cc;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(3rem, 7vw, 7rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: .9;
+  white-space: nowrap;
+}
+
+body[data-titus-route="introduction"] .background-subtitle {
+  max-width: 50rem !important;
+  margin: 1.6rem 0 0 !important;
+  color: #cbbf9e !important;
+  font-family: "Jost", system-ui, sans-serif !important;
+  font-size: 1.25rem !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, .45);
+}
+
+@media (max-width: 760px) {
+  body[data-titus-route="introduction"] .background-hero {
+    min-height: 25rem !important;
+    padding: 3rem 1.35rem 1.75rem !important;
+  }
+
+  body[data-titus-route="introduction"] .background-hero::before {
+    background-position: 64% top;
+    opacity: .52;
+  }
+
+  body[data-titus-route="introduction"] .background-introduction-prefix {
+    margin-bottom: .72rem;
+    font-size: 1rem;
+    letter-spacing: .12em;
+    line-height: 1.3;
+    white-space: normal;
+  }
+
+  body[data-titus-route="introduction"] .background-introduction-book {
+    font-size: clamp(2.25rem, 11.5vw, 4.5rem);
+    white-space: normal;
+  }
+
+  body[data-titus-route="introduction"] .background-subtitle {
+    margin-top: 1.25rem !important;
+    font-size: 1.08rem !important;
+  }
+}
+
+.home-showcase-copy h1 {
+  max-width: 9ch !important;
+  color: #f3e8cc !important;
+  font-size: clamp(3rem, 7vw, 7rem) !important;
+  font-weight: 600 !important;
+  text-shadow: 0 18px 44px rgba(0, 0, 0, .32);
+}
+
+.home-showcase-description,
+
+.home-action-card > span:not(.home-action-icon),
+
+.home-section-split > p {
+  color: #b9ad90 !important;
+}
+
+.home-section-split {
+  border-color: rgba(201, 164, 76, .2) !important;
+}
+
+
+.home-section-kicker,
+
+
+.home-chapter-group > p,
+
+
+.home-chapter-mini-grid span,
+
+
+.reader-pane-kicker,
+
+
+.passage-outline-range {
+  color: #d8b866 !important;
+  font-family: var(--font-sans), system-ui, sans-serif !important;
+  letter-spacing: .24em !important;
+}
+
+.home-showcase-primary,
+.home-showcase-secondary {
+  min-height: 3rem !important;
+  border-radius: .375rem !important;
+  font-family: var(--font-sans), system-ui, sans-serif !important;
+  letter-spacing: .12em !important;
+}
+
+.home-showcase-primary {
+  border-color: #d8b866 !important;
+  background: #c9a44c !important;
+  color: #081521 !important;
+}
+
+.home-showcase-secondary {
+  border-color: rgba(201, 164, 76, .28) !important;
+  background: rgba(18, 38, 63, .78) !important;
+  color: #ece0c4 !important;
+}
+
+.home-showcase-primary:hover,
+.home-showcase-secondary:hover {
+  border-color: #e0c37e !important;
+  background: rgba(201, 164, 76, .18) !important;
+  color: #fff2d4 !important;
+}
+
+
+
+
+.home-action-card,
+
+
+.home-chapter-group,
+
+
+.home-chapter-mini-grid a,
+
+
+.exposition-card,
+
+
+.verse-study-card {
+  border-color: rgba(201, 164, 76, .18) !important;
+  border-radius: .5rem !important;
+  background: rgba(18, 38, 63, .78) !important;
+  box-shadow: 0 20px 60px -44px rgba(0, 0, 0, .82) !important;
+}
+
+
+.home-action-card:hover,
+
+.home-chapter-mini-grid a:hover {
+  border-color: rgba(201, 164, 76, .45) !important;
+  background: rgba(23, 48, 76, .9) !important;
+}
+
+
+.home-action-icon {
+  border-radius: .5rem !important;
+  background: rgba(201, 164, 76, .13) !important;
+  color: #d8b866 !important;
+}
+
+.home-action-card strong,
+
+.home-chapter-group h3 {
+  color: #f3e8cc !important;
+  font-weight: 500 !important;
+}
+
+.home-action-card em {
+  color: #d8b866 !important;
+}
+
+.reader-page {
+  --chapter-strip-height: 3.75rem !important;
+  min-height: calc(100vh - 4.35rem) !important;
+}
+
+.split-reader {
+  height: calc(100vh - 4.35rem - var(--chapter-strip-height)) !important;
+}
+
+.scripture-pane {
+  background: rgba(14, 33, 56, .86) !important;
+}
+
+.commentary-pane {
+  border-left: 1px solid rgba(201, 164, 76, .18) !important;
+  background: rgba(8, 21, 33, .88) !important;
+}
+
+.reader-pane-toolbar {
+  min-height: 4.1rem !important;
+  border-color: rgba(201, 164, 76, .18) !important;
+  background: rgba(11, 31, 58, .94) !important;
+  color: #b9ad90 !important;
+}
+
+.reader-pane-controls button {
+  border-color: rgba(201, 164, 76, .24) !important;
+  background: rgba(18, 38, 63, .72) !important;
+  color: #ece0c4 !important;
+}
+
+body[data-titus-chapter] .scripture-pane-header {
+  position: relative !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body[data-titus-chapter] .scripture-pane-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+.scripture-pane-header h1 {
+  color: #f3e8cc !important;
+  font-size: clamp(2.25rem, 3.2vw, 3rem) !important;
+  font-weight: 600 !important;
+}
+
+.scripture-chapter-summary,
+
+.commentary-reading {
+  color: rgba(236, 224, 196, .82) !important;
+}
+
+.scripture-pane-header::after {
+  background: rgba(201, 164, 76, .26) !important;
+  border-color: rgba(201, 164, 76, .22) !important;
+}
+
+.passage-outline-divider {
+  background: transparent !important;
+  border-color: rgba(201, 164, 76, .22) !important;
+}
+
+.scripture-card {
+  border-color: transparent !important;
+  border-radius: .5rem !important;
+  color: #ece0c4 !important;
+}
+
+.scripture-card:hover {
+  background: rgba(216, 184, 102, .08) !important;
+  transform: none !important;
+}
+
+.scripture-card-active {
+  border-color: rgba(201, 164, 76, .42) !important;
+  background: rgba(201, 164, 76, .12) !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .18) !important;
+}
+
+.verse-number {
+  color: #d8b866 !important;
+  font-family: var(--font-sans), system-ui, sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.verse-copy {
+  color: #f3e8cc !important;
+  font-size: var(--scripture-desktop-font-size, 1.25rem) !important;
+  font-weight: 500 !important;
+  line-height: 1.62 !important;
+}
+
+
+.verse-study-card-header,
+
+.word-note-title {
+  background: rgba(201, 164, 76, .13) !important;
+  color: #d8b866 !important;
+}
+
+.exposition-card {
+  border-color: rgba(201, 164, 76, .22) !important;
+  background: rgba(18, 38, 63, .82) !important;
+}
+
+.exposition-card-heading h2,
+.passage-outline-title {
+  color: #f3e8cc !important;
+  font-weight: 500 !important;
+}
+
+.commentary-reading {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: var(--notes-font-size, 1.125rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.78 !important;
+}
+
+.word-note,
+.reference-chip,
+.word-reference-chip {
+  border-color: rgba(201, 164, 76, .2) !important;
+  background: rgba(14, 33, 56, .72) !important;
+  color: #ece0c4 !important;
+}
+
+.word-note p,
+.study-card-empty {
+  color: #b9ad90 !important;
+}
+
+/* Typography roles for the current study design. */
+h1,
+
+
+h2,
+
+
+.reader-brand-text,
+
+
+.reader-brand-strong,
+
+
+.mbe-library-name,
+
+
+.home-showcase-copy h1,
+
+
+.home-section-split h2,
+
+
+.background-hero h1,
+
+
+.background-hero h2,
+
+
+.background-section h2,
+
+
+.scripture-pane-header h1 {
+  font-family: "Cinzel", Georgia, serif !important;
+}
+
+.scripture-pane-body,
+
+
+.scripture-card,
+
+
+.verse-copy,
+
+
+.passage-outline-title,
+
+
+.verse-study-card h3,
+
+
+.word-note-title,
+
+
+.word-note p,
+
+
+.study-card-empty,
+
+
+.home-showcase-description,
+
+
+.home-action-card strong,
+
+
+.home-chapter-group h3 {
+  font-family: var(--font-serif), Georgia, serif !important;
+}
+
+.mbe-global-shell,
+
+
+.mbe-global-footer,
+
+
+.mbe-ribbon-back,
+
+
+.mbe-library-toggle,
+
+
+.mbe-library-desc,
+
+
+.mbe-footer-link,
+
+
+.reader-nav,
+
+
+.reader-menu,
+
+
+.reader-menu-link,
+
+
+.reader-nav-link,
+
+
+.reader-header-actions,
+
+
+.reader-menu-button,
+
+
+.home-showcase-actions,
+
+
+.home-showcase-primary,
+
+
+.home-showcase-secondary,
+
+
+.home-action-card em,
+
+
+.home-section-kicker,
+
+
+.home-chapter-group > p,
+
+
+.home-chapter-mini-grid span,
+
+
+.reader-pane-toolbar,
+
+
+.reader-pane-kicker,
+
+
+.reader-pane-subtitle,
+
+
+.reader-pane-controls,
+
+
+.reader-pane-controls button,
+
+
+.scripture-chapter-summary,
+
+
+.exposition-card-heading h2,
+
+
+.commentary-reading,
+
+
+.commentary-reading p,
+
+
+.verse-number,
+
+
+.verse-study-card-header,
+
+
+.reference-chip,
+
+
+.word-reference-chip,
+
+
+button,
+
+
+input,
+
+
+select,
+
+
+textarea,
+
+
+label,
+
+
+figcaption,
+
+
+caption {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* Chapter-screen typography. */
+body[data-titus-chapter] .scripture-pane-header h1 {
+  font-family: "Cinzel", Georgia, serif !important;
+  font-weight: 500 !important;
+  letter-spacing: .015em !important;
+}
+
+body[data-titus-chapter] .scripture-chapter-summary {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1rem, 1.25vw, 1.25rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.65 !important;
+}
+
+body[data-titus-chapter] .passage-outline-title,
+body[data-titus-chapter] .verse-copy {
+  font-family: var(--font-serif), Georgia, serif !important;
+}
+
+body[data-titus-chapter] .passage-outline-title {
+  font-weight: 600 !important;
+  letter-spacing: .01em !important;
+  line-height: 1.18 !important;
+}
+
+body[data-titus-chapter] .exposition-card-heading h2,
+body[data-titus-chapter] .commentary-reading,
+body[data-titus-chapter] .commentary-reading p {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  letter-spacing: 0 !important;
+}
+
+body[data-titus-chapter] .exposition-card-heading h2 {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+}
+
+body[data-titus-chapter] .commentary-reading,
+body[data-titus-chapter] .commentary-reading p {
+  font-size: var(--notes-font-size, 1.125rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.82 !important;
+}
+
+@media (max-width: 980px) {
+  .reader-header {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+  }
+
+  .split-reader {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-showcase-copy h1 {
+    width: max-content;
+    max-width: 100% !important;
+    font-size: clamp(1.8rem, 10.5vw, 4.25rem) !important;
+    white-space: nowrap;
+  }
+
+  .verse-copy {
+    font-size: var(--scripture-mobile-font-size, 1.125rem) !important;
+  }
+}
+
+body[data-titus-route="home"] .home-title-prefix {
+  margin: 0 0 1rem;
+  color: #d8b866;
+  font-family: var(--font-display) !important;
+  font-size: 1.25rem !important;
+  font-weight: 500;
+  letter-spacing: .18em;
+  line-height: 1.25;
+  text-shadow: 0 12px 28px rgba(0, 0, 0, .48);
+}
+
+@media (max-width: 640px) {
+  body[data-titus-route="home"] .home-title-prefix {
+    margin-bottom: .75rem;
+    font-size: 1rem !important;
+    letter-spacing: .14em;
+  }
+}
+
+@media (min-width: 981px) {
+  body[data-titus-route="home"] .home-action-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Final chapter typography layer. */
+body[data-titus-chapter] .scripture-pane-header h1 {
+  max-width: none !important;
+  font-family: "Cinzel", Georgia, serif !important;
+  font-size: clamp(1.875rem, 2.3vw, 2.25rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: .015em !important;
+  line-height: 2.5rem !important;
+}
+
+body[data-titus-chapter] .scripture-chapter-summary {
+  max-width: 42rem !important;
+  margin-top: .75rem !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.75rem !important;
+}
+
+body[data-titus-chapter] .passage-outline-divider {
+  background: transparent !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  box-shadow: none !important;
+}
+
+body[data-titus-chapter] .passage-outline-range {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .16em !important;
+  line-height: 1.35 !important;
+}
+
+body[data-titus-chapter] .passage-outline-title {
+  font-family: "Cinzel", Georgia, serif !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .02em !important;
+  line-height: 1.35 !important;
+}
+
+body[data-titus-chapter] .verse-copy {
+  font-family: var(--font-serif), Georgia, serif !important;
+  font-size: var(--scripture-desktop-font-size, 1.25rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.75rem !important;
+}
+
+body[data-titus-chapter] .exposition-card-heading h2 {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: .875rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.25rem !important;
+}
+
+body[data-titus-chapter] .commentary-reading,
+body[data-titus-chapter] .commentary-reading p {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: var(--notes-font-size, 1.125rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 2rem !important;
+}
+
+@media (max-width: 640px) {
+  body[data-titus-chapter] .verse-copy {
+    font-size: var(--scripture-mobile-font-size, 1.125rem) !important;
+  }
+}
+
+/* Verse-level Study Links, following the illustrated reader card system. */
+body[data-titus-chapter] .verse-study-card {
+  min-width: 0;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem) !important;
+  border: 1px solid rgba(201, 164, 76, .34) !important;
+  border-radius: .55rem !important;
+  background: rgba(14, 31, 52, .72) !important;
+  padding: clamp(1rem, 2.5vw, 1.75rem) !important;
+  box-shadow: none !important;
+}
+
+body[data-titus-chapter] .verse-study-card-header {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  margin: 0 0 clamp(1.15rem, 2.5vw, 1.7rem);
+  background: rgba(190, 179, 157, .13) !important;
+  color: #f3e8cc !important;
+  padding: .48rem .65rem;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .18em !important;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+body[data-titus-chapter] .verse-study-grid {
+  display: grid;
+  gap: clamp(1.35rem, 3vw, 2.2rem);
+  margin-top: 0;
+}
+
+body[data-titus-chapter] .study-card-section {
+  min-width: 0;
+}
+
+body[data-titus-chapter] .study-card-section h3 {
+  margin: 0;
+  color: #cfc6b1 !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .18em !important;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+body[data-titus-chapter] .reference-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem .75rem;
+  margin-top: 1rem;
+}
+
+body[data-titus-chapter] .scripture-reference-preview {
+  display: inline-flex;
+  min-width: 0;
+  max-width: 100%;
+}
+
+body[data-titus-chapter] .reference-chip {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.65rem;
+  max-width: 100%;
+  border: 1px solid rgba(201, 164, 76, .48) !important;
+  border-radius: .45rem !important;
+  background: rgba(190, 179, 157, .08) !important;
+  color: #f3e8cc !important;
+  padding: .58rem .9rem;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(.88rem, calc(var(--notes-font-size, 18px) - 2px), 1.2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+
+body[data-titus-chapter] .reference-chip:hover {
+  border-color: #d8b866 !important;
+  background: rgba(201, 164, 76, .15) !important;
+  color: #fff2d4 !important;
+}
+
+body[data-titus-chapter] .word-note-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+body[data-titus-chapter] .word-note {
+  min-width: 0;
+  border: 1px solid rgba(216, 184, 102, .76) !important;
+  border-radius: .5rem !important;
+  background: rgba(18, 38, 63, .62) !important;
+  padding: clamp(.9rem, 2.2vw, 1.35rem) !important;
+}
+
+body[data-titus-chapter] .word-note-title {
+  display: block;
+  width: 100%;
+  background: rgba(190, 179, 157, .13) !important;
+  color: #d8b866 !important;
+  padding: .25rem .45rem;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(.95rem, calc(var(--notes-font-size, 18px) - 1px), 1.25rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+body[data-titus-chapter] .word-note p {
+  margin: .95rem 0 0;
+  color: #ddd3bf !important;
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1rem, var(--notes-font-size, 18px), 1.35rem);
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+body[data-titus-chapter] .word-reference-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem 1rem;
+  margin-top: 1rem;
+}
+
+body[data-titus-chapter] .word-reference-chip {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  border: 0 !important;
+  border-radius: .2rem !important;
+  background: transparent !important;
+  color: #d8b866 !important;
+  padding: .15rem 0;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(.82rem, calc(var(--notes-font-size, 18px) - 3px), 1.08rem);
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+  text-underline-offset: .22em;
+  cursor: pointer;
+}
+
+body[data-titus-chapter] .word-reference-chip:hover {
+  color: #fff2d4 !important;
+  text-decoration: underline;
+}
+
+body[data-titus-chapter] .reference-chip:focus-visible,
+body[data-titus-chapter] .word-reference-chip:focus-visible {
+  outline: 2px solid #f0cb70;
+  outline-offset: 3px;
+}
+
+body[data-titus-chapter] .reference-preview-popup {
+  position: fixed;
+  z-index: 3000;
+  width: min(28rem, calc(100vw - 1.5rem));
+  max-height: min(28rem, calc(100vh - 1.5rem));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid rgba(216, 184, 102, .72);
+  border-radius: .55rem;
+  background: rgba(7, 17, 28, .985);
+  color: #eee3cc;
+  padding: .9rem 1rem 1rem;
+  box-shadow: 0 1rem 2.6rem rgba(0, 0, 0, .48);
+  opacity: 0;
+  transform: translateY(3px);
+  pointer-events: auto;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+body[data-titus-chapter] .reference-preview-popup[data-ready="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body[data-titus-chapter] .reference-preview-heading {
+  margin: 0 0 .65rem;
+  color: #d8b866;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  line-height: 1.3;
+}
+
+body[data-titus-chapter] .reference-preview-verses {
+  display: grid;
+  gap: .65rem;
+}
+
+body[data-titus-chapter] .reference-preview-verses p,
+body[data-titus-chapter] .reference-preview-continuation {
+  margin: 0;
+  color: #eee3cc;
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-size: .98rem;
+  font-weight: 400;
+  line-height: 1.58;
+}
+
+body[data-titus-chapter] .reference-preview-verses p span {
+  margin-right: .45rem;
+  color: #d8b866;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: .78em;
+  font-weight: 700;
+}
+
+body[data-titus-chapter] .reference-preview-continuation {
+  margin-top: .75rem;
+  color: #bfb49c;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: .78rem;
+  font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-titus-chapter] .reference-preview-popup {
+    transition: none;
+  }
+}
+
+body[data-titus-chapter] .study-card-empty {
+  margin: 0;
+  color: #b9ad90 !important;
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif !important;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  body[data-titus-chapter] .verse-study-card {
+    padding: .9rem !important;
+  }
+
+  body[data-titus-chapter] .verse-study-card-header {
+    margin-bottom: 1rem;
+    font-size: .76rem;
+    letter-spacing: .14em !important;
+  }
+
+  body[data-titus-chapter] .reference-chip-list {
+    gap: .5rem;
+  }
+
+  body[data-titus-chapter] .reference-chip {
+    min-height: 2.35rem;
+    padding: .48rem .7rem;
+  }
+
+  body[data-titus-chapter] .word-note {
+    padding: .8rem !important;
+  }
+}
+
+/* Commentary typography split between Scripture, notes, and interface text. */
+body[data-titus-chapter] .split-reader {
+  --scripture-mobile-font-size: 1.125rem;
+  --scripture-desktop-font-size: 1.25rem;
+  --notes-font-size: 1.125rem;
+}
+
+body[data-titus-chapter] .scripture-pane,
+body[data-titus-chapter] .scripture-pane-body,
+body[data-titus-chapter] .scripture-list,
+body[data-titus-chapter] .scripture-card,
+body[data-titus-chapter] .verse-copy {
+  font-family: var(--font-serif), Georgia, serif !important;
+}
+
+body[data-titus-chapter] .commentary-pane,
+body[data-titus-chapter] .commentary-pane-body,
+body[data-titus-chapter] .commentary-reading,
+body[data-titus-chapter] .commentary-reading p,
+body[data-titus-chapter] .reader-pane-toolbar,
+body[data-titus-chapter] .reader-pane-kicker,
+body[data-titus-chapter] .reader-pane-subtitle,
+body[data-titus-chapter] .reader-pane-controls,
+body[data-titus-chapter] .reader-pane-controls button,
+body[data-titus-chapter] .verse-number,
+body[data-titus-chapter] .passage-outline-divider,
+body[data-titus-chapter] .passage-outline-range,
+body[data-titus-chapter] .exposition-card-heading h2 {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+body[data-titus-chapter] .scripture-pane-body {
+  padding: 1.5rem clamp(1.5rem, 3vw, 2.5rem) 0 !important;
+}
+
+body[data-titus-chapter] .scripture-pane-header {
+  margin-bottom: 1.75rem !important;
+  padding-bottom: 1.5rem !important;
+  border-bottom: 1px solid rgba(201, 164, 76, .18) !important;
+}
+
+body[data-titus-chapter] .scripture-pane-header::after {
+  display: none !important;
+}
+
+body[data-titus-chapter] .scripture-pane-header h1 {
+  max-width: none !important;
+  color: #f3e8cc !important;
+  font-family: "Cinzel", Georgia, serif !important;
+  font-size: clamp(1.875rem, 2.3vw, 2.25rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: .015em !important;
+  line-height: 2.5rem !important;
+}
+
+body[data-titus-chapter] .scripture-chapter-summary {
+  max-width: 42rem !important;
+  margin-top: .75rem !important;
+  color: rgba(236, 224, 196, .78) !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.75rem !important;
+}
+
+body[data-titus-chapter] .scripture-list {
+  margin-top: 0 !important;
+  display: grid !important;
+  gap: 1rem !important;
+  color: #f3e8cc !important;
+  font-size: var(--scripture-desktop-font-size, 1.25rem) !important;
+  line-height: 1.75rem !important;
+}
+
+body[data-titus-chapter] .passage-outline-divider {
+  margin: 2rem 0 .65rem !important;
+  padding-top: 1rem !important;
+  border-top: 1px solid rgba(201, 164, 76, .18) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body[data-titus-chapter] .passage-outline-range {
+  color: #d8b866 !important;
+  font-size: .72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .16em !important;
+  line-height: 1.35 !important;
+  text-transform: uppercase !important;
+}
+
+body[data-titus-chapter] .passage-outline-title {
+  margin-top: .35rem !important;
+  color: #f3e8cc !important;
+  font-family: "Cinzel", Georgia, serif !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .02em !important;
+  line-height: 1.35 !important;
+}
+
+body[data-titus-chapter] .scripture-card {
+  display: block !important;
+  width: 100% !important;
+  padding: .5rem !important;
+  border: 0 !important;
+  border-radius: .25rem !important;
+  background: transparent !important;
+  color: #f3e8cc !important;
+  text-align: left !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+body[data-titus-chapter] .scripture-card:hover {
+  background: rgba(201, 164, 76, .10) !important;
+  transform: none !important;
+}
+
+body[data-titus-chapter] .scripture-card-active,
+body[data-titus-chapter] .scripture-card-active:hover {
+  border: 0 !important;
+  background: rgba(201, 164, 76, .10) !important;
+  box-shadow: inset 3px 0 0 0 #c9a44c !important;
+}
+
+body[data-titus-chapter] .verse-number {
+  display: inline !important;
+  margin-right: .5rem !important;
+  color: #d8b866 !important;
+  font-size: .75rem !important;
+  font-weight: 700 !important;
+  line-height: 0 !important;
+  vertical-align: super !important;
+}
+
+body[data-titus-chapter] .verse-copy {
+  display: inline !important;
+  color: #f3e8cc !important;
+  font-size: var(--scripture-desktop-font-size, 1.25rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.75rem !important;
+}
+
+body[data-titus-chapter] .commentary-pane {
+  background: hsl(213 34% 18%) !important;
+}
+
+body[data-titus-chapter] .reader-pane-toolbar-notes {
+  background: hsl(213 42% 16%) !important;
+  border-bottom-color: hsl(213 26% 27%) !important;
+}
+
+body[data-titus-chapter] .commentary-pane-body {
+  padding: 1.25rem !important;
+  background: hsl(213 34% 18%) !important;
+}
+
+body[data-titus-chapter] .commentary-shell {
+  max-width: none !important;
+}
+
+body[data-titus-chapter] .exposition-card {
+  margin-top: 0 !important;
+  padding: 1.25rem !important;
+  border: 1px solid rgba(201, 164, 76, .55) !important;
+  border-radius: .375rem !important;
+  background: hsl(213 42% 16%) !important;
+  box-shadow:
+    0 0 0 1px rgba(201, 164, 76, .35),
+    0 1px 2px rgba(0, 0, 0, .18) !important;
+}
+
+body[data-titus-chapter] .exposition-card-heading {
+  margin-bottom: .75rem !important;
+}
+
+body[data-titus-chapter] .exposition-card-heading h2 {
+  color: #f3e8cc !important;
+  font-size: .875rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.25rem !important;
+}
+
+body[data-titus-chapter] .commentary-reading {
+  margin-top: 0 !important;
+  color: rgba(236, 224, 196, .86) !important;
+  font-size: var(--notes-font-size, 1.125rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 2rem !important;
+}
+
+body[data-titus-chapter] .commentary-reading p {
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  letter-spacing: inherit !important;
+  line-height: inherit !important;
+}
+
+body[data-titus-chapter] .commentary-reading p + p {
+  margin-top: 1.5rem !important;
+}
+
+@media (max-width: 640px) {
+  body[data-titus-chapter] .scripture-list,
+  body[data-titus-chapter] .verse-copy {
+    font-size: var(--scripture-mobile-font-size, 1.125rem) !important;
+  }
+
+  body[data-titus-chapter] .scripture-pane-header h1 {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+  }
+}
+
+/* Final Titus chapter reader layer. */
+body[data-titus-chapter] {
+  background: hsl(213 58% 13%) !important;
+}
+
+body[data-titus-chapter] .reader-page {
+  background: hsl(213 58% 13%) !important;
+}
+
+body[data-titus-chapter] .split-reader {
+  --scripture-mobile-font-size: 1.125rem;
+  --scripture-desktop-font-size: 1.25rem;
+  --notes-font-size: 1.125rem;
+  background: hsl(213 58% 13%) !important;
+}
+
+body[data-titus-chapter] .scripture-pane {
+  background: hsl(213 42% 16%) !important;
+}
+
+body[data-titus-chapter] .commentary-pane,
+body[data-titus-chapter] .commentary-pane-body {
+  background: hsl(213 34% 18%) !important;
+}
+
+body[data-titus-chapter] .scripture-pane-body {
+  padding: 1.5rem clamp(1.5rem, 3vw, 2.5rem) 0 !important;
+}
+
+body[data-titus-chapter] .scripture-pane-header {
+  margin-bottom: .75rem !important;
+  padding-bottom: .35rem !important;
+  border-bottom: 0 !important;
+}
+
+body[data-titus-chapter] .scripture-pane-header::after {
+  display: none !important;
+}
+
+body[data-titus-chapter] .scripture-pane-header h1 {
+  color: hsl(41 44% 89%) !important;
+  font-family: "Cinzel", Georgia, serif !important;
+  font-size: clamp(1.875rem, 2.3vw, 2.25rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: .015em !important;
+  line-height: 2.5rem !important;
+}
+
+body[data-titus-chapter] .scripture-chapter-summary {
+  max-width: 42rem !important;
+  margin-top: .75rem !important;
+  color: hsl(41 20% 68%) !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  line-height: 1.75rem !important;
+}
+
+body[data-titus-chapter] .passage-outline-divider {
+  margin: 0 0 .65rem !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+
+body[data-titus-chapter] .passage-outline-range {
+  color: hsl(42 54% 54%) !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .16em !important;
+  line-height: 1.35 !important;
+}
+
+body[data-titus-chapter] .passage-outline-title {
+  margin-top: .35rem !important;
+  color: hsl(41 44% 89%) !important;
+  font-family: "Cinzel", Georgia, serif !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .02em !important;
+  line-height: 1.35 !important;
+}
+
+body[data-titus-chapter] .scripture-list {
+  gap: 1rem !important;
+  color: hsl(41 44% 89%) !important;
+}
+
+body[data-titus-chapter] .scripture-card {
+  display: block !important;
+  padding: .5rem !important;
+  border: 0 !important;
+  border-radius: .25rem !important;
+  background: transparent !important;
+}
+
+body[data-titus-chapter] .scripture-card-active,
+body[data-titus-chapter] .scripture-card-active:hover {
+  background: hsl(42 54% 54% / .10) !important;
+  box-shadow: inset 3px 0 0 hsl(42 54% 54%) !important;
+}
+
+body[data-titus-chapter] .verse-number {
+  display: inline !important;
+  margin-right: .5rem !important;
+  color: hsl(42 54% 54%) !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: .75rem !important;
+  font-weight: 700 !important;
+  line-height: 0 !important;
+  vertical-align: super !important;
+}
+
+body[data-titus-chapter] .verse-copy {
+  display: inline !important;
+  color: hsl(41 44% 89%) !important;
+  font-family: var(--font-serif), Georgia, serif !important;
+  font-size: var(--scripture-desktop-font-size, 1.25rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.75rem !important;
+}
+
+body[data-titus-chapter] .reader-pane-toolbar,
+body[data-titus-chapter] .reader-pane-toolbar-notes {
+  min-height: 65px !important;
+  background: hsl(213 42% 16%) !important;
+  border-color: hsl(213 26% 27%) !important;
+}
+
+body[data-titus-chapter] .reader-pane-kicker {
+  color: hsl(41 44% 89%) !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: .875rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .16em !important;
+}
+
+body[data-titus-chapter] .reader-pane-kicker svg {
+  color: hsl(42 54% 54%) !important;
+}
+
+body[data-titus-chapter] .commentary-pane-body {
+  padding: 1.25rem !important;
+}
+
+body[data-titus-chapter] .exposition-card {
+  margin-top: 0 !important;
+  padding: 1.25rem !important;
+  border: 1px solid hsl(42 54% 54% / .55) !important;
+  border-radius: .375rem !important;
+  background: hsl(213 42% 16%) !important;
+  box-shadow:
+    0 0 0 1px hsl(42 54% 54% / .35),
+    0 1px 2px rgb(0 0 0 / .18) !important;
+}
+
+body[data-titus-chapter] .exposition-card-heading {
+  margin-bottom: .75rem !important;
+}
+
+body[data-titus-chapter] .exposition-card-heading h2 {
+  color: hsl(41 44% 89%) !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: .875rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.25rem !important;
+}
+
+body[data-titus-chapter] .commentary-reading,
+body[data-titus-chapter] .commentary-reading p {
+  color: hsl(41 44% 89%) !important;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  font-size: var(--notes-font-size, 1.125rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 2rem !important;
+}
+
+body[data-titus-chapter] .commentary-reading p + p {
+  margin-top: 1rem !important;
+}
+
+/* Titus typography standardization: final winning layer.
+   Cinzel = headings, EB Garamond = Bible text, Jost = notes and UI. */
+:root,
+.dark {
+  --display-font: "Cinzel", Georgia, "Times New Roman", serif;
+  --scripture-font: "EB Garamond", Georgia, "Times New Roman", serif;
+  --ui-font: "Jost", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: var(--display-font);
+  --font-serif: var(--scripture-font);
+  --font-sans: var(--ui-font);
+  --mbe-font-display: var(--font-display);
+  --mbe-font-reading: var(--font-serif);
+  --mbe-font-ui: var(--font-sans);
+}
+
+body {
+  font-family: var(--font-sans) !important;
+}
+
+.reader-brand-text,
+
+
+.reader-brand-strong,
+
+
+.mbe-library-name,
+
+
+.home-showcase-copy h1,
+
+
+.home-section-split h2,
+
+
+.background-hero h1,
+
+
+.background-hero h2,
+
+
+body[data-titus-chapter] .scripture-pane-header h1,
+
+
+body[data-titus-chapter] .passage-outline-title,
+
+
+body[data-titus-chapter] .reader-pane-toolbar-notes .reader-pane-kicker {
+  font-family: var(--font-display) !important;
+  font-weight: 600 !important;
+}
+
+.home-showcase-copy h1 {
+  font-size: clamp(3rem, 7vw, 7rem) !important;
+  line-height: .95 !important;
+}
+
+.home-section-split h2,
+
+.background-hero h1 {
+  font-size: clamp(2.25rem, 5vw, 4.5rem) !important;
+  line-height: 1 !important;
+}
+
+
+.background-section h2 {
+  font-size: clamp(1.875rem, 3vw, 2.25rem) !important;
+  line-height: 1.12 !important;
+}
+
+body[data-titus-chapter] .scripture-pane-header h1 {
+  font-size: clamp(1.7rem, 2.1vw, 2.15rem) !important;
+  line-height: 2.15rem !important;
+}
+
+.verse-copy,
+.scripture-card .verse-copy,
+.scripture-pane .verse-copy,
+body[data-titus-chapter] .verse-copy {
+  font-family: var(--font-serif) !important;
+}
+
+body[data-titus-chapter] .verse-copy {
+  font-size: var(--scripture-desktop-font-size, 1.25rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.75rem !important;
+}
+
+body[data-titus-chapter] .passage-outline-title {
+  font-family: var(--font-display) !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .02em !important;
+  line-height: 1.25 !important;
+}
+
+body[data-titus-chapter] .commentary-reading,
+
+body[data-titus-chapter] .commentary-reading p {
+  font-family: var(--font-sans) !important;
+  font-size: var(--notes-font-size, 1.125rem) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 2rem !important;
+}
+
+.mbe-global-shell,
+
+
+.mbe-global-footer,
+
+
+.mbe-ribbon-back,
+
+
+.mbe-library-toggle,
+
+
+.mbe-library-desc,
+
+
+.mbe-footer-link,
+
+
+.reader-nav,
+
+
+.reader-menu,
+
+
+.reader-menu-link,
+
+
+.reader-nav-link,
+
+
+.reader-header-actions,
+
+
+.reader-menu-button,
+
+
+.home-showcase-description,
+
+
+.home-showcase-actions,
+
+
+.home-showcase-primary,
+
+
+.home-showcase-secondary,
+
+
+.home-action-card,
+
+
+.home-action-card strong,
+
+
+.home-action-card > span,
+
+
+.home-action-card em,
+
+
+.home-section-kicker,
+
+
+.home-chapter-group,
+
+
+.home-chapter-group h3,
+
+
+.home-chapter-group > p,
+
+
+.home-chapter-mini-grid,
+
+
+.home-chapter-mini-grid span,
+
+
+.background-subtitle,
+
+
+.background-section-nav,
+
+
+.background-section-nav a,
+
+
+.background-section-number,
+
+
+.reader-pane-toolbar,
+
+
+.reader-pane-kicker,
+
+
+.reader-pane-subtitle,
+
+
+.reader-pane-controls,
+
+
+.reader-pane-controls button,
+
+
+.scripture-chapter-summary,
+
+
+.passage-outline-range,
+
+
+.exposition-card-heading h2,
+
+
+.verse-number,
+
+
+.verse-study-card,
+
+
+.verse-study-card-header,
+
+
+.verse-study-card h3,
+
+
+.study-card-section h3,
+
+
+.reference-chip,
+
+
+.word-note-title,
+
+
+.word-reference-chip,
+
+
+button,
+
+
+input,
+
+
+select,
+
+
+textarea,
+
+
+label,
+
+
+figcaption,
+
+
+caption {
+  font-family: var(--font-sans) !important;
+}
+
+body[data-titus-chapter] .reader-pane-toolbar:not(.reader-pane-toolbar-notes) .reader-pane-kicker,
+
+body[data-titus-chapter] .reader-pane-toolbar:not(.reader-pane-toolbar-notes) .reader-pane-kicker span,
+
+body[data-titus-chapter] .passage-outline-range,
+
+body[data-titus-chapter] .verse-number {
+  font-family: var(--font-sans) !important;
+}
+
+body[data-titus-chapter] .reader-pane-toolbar-notes .reader-pane-kicker,
+body[data-titus-chapter] .reader-pane-toolbar-notes .reader-pane-kicker span {
+  font-family: var(--font-display) !important;
+  font-size: .875rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .16em !important;
+}
+
+.reader-brand-text {
+  font-size: .78rem !important;
+}
+
+.reader-menu-link,
+
+
+.reader-nav-link,
+
+
+.home-showcase-primary,
+
+
+.home-showcase-secondary,
+
+
+.home-action-card em {
+  font-size: .72rem !important;
+}
+
+
+.home-section-kicker,
+
+.home-chapter-group > p,
+
+.home-chapter-mini-grid span,
+
+.passage-outline-range {
+  font-size: .75rem !important;
+}
+
+.home-showcase-description,
+.background-subtitle {
+  font-size: clamp(1rem, 1.7vw, 1.25rem) !important;
+}
+
+.home-action-card > span:not(.home-action-icon),
+
+.home-section-split > p,
+.background-section-body p {
+  font-size: .98rem !important;
+}
+
+.home-action-card strong,
+
+.home-chapter-group h3 {
+  font-size: 1.25rem !important;
+}
+
+.scripture-chapter-summary,
+
+.reader-pane-kicker,
+
+.exposition-card-heading h2 {
+  font-size: .875rem !important;
+}
+
+body[data-titus-chapter] .split-reader {
+  --scripture-mobile-font-size: 1.125rem;
+  --scripture-desktop-font-size: 1.25rem;
+  --notes-font-size: 1.125rem;
+}
+
+@media (max-width: 640px) {
+  .home-showcase-copy h1 {
+    width: max-content;
+    max-width: 100% !important;
+    font-size: clamp(1.8rem, 10.5vw, 4.25rem) !important;
+    white-space: nowrap;
+  }
+
+  body[data-titus-chapter] .verse-copy {
+    font-size: var(--scripture-mobile-font-size, 1.125rem) !important;
+  }
+}
+
+
+/* MBE asset delivery fallback: keep hero artwork above the isolated background in Safari. */
+body[data-titus-route="home"] .home-showcase-hero::before,
+body[data-titus-route="introduction"] .background-hero::before {
+  z-index: 0 !important;
+}
+
+body[data-titus-route="home"] .home-showcase-hero::after,
+body[data-titus-route="introduction"] .background-hero::after {
+  z-index: 1 !important;
+}
+
+body[data-titus-route="home"] .home-showcase-copy,
+body[data-titus-route="introduction"] .background-hero > * {
+  position: relative;
+  z-index: 2 !important;
+}
+
+/* Site-specific adjustments generated for Titus Study. */
+body[data-titus-route="home"] .home-showcase-hero::before {
+  background-image: url("/assets/titus-hero-engraving.webp?v=mbe-20261104-1");
+}
+
+body[data-titus-route="home"] .home-showcase-copy h1.home-title-long {
+  font-size: clamp(2.6rem, 6.2vw, 5.4rem) !important;
+  line-height: 1.02 !important;
+  max-width: 14ch;
+}
+
+@media (min-width: 1100px) {
+  body[data-titus-route="home"] .home-action-grid.home-action-grid-wide {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}

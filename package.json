@@ -1,0 +1,47 @@
+{
+  "name": "titus-study-platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "PATH=./bin:$PATH NEXT_TEST_WASM_DIR=./node_modules/@next/swc-wasm-nodejs next dev --webpack",
+    "build": "PATH=./bin:$PATH NEXT_TEST_WASM_DIR=./node_modules/@next/swc-wasm-nodejs next build --webpack",
+    "start": "PATH=./bin:$PATH next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "validate:content": "node scripts/validate-content.mjs",
+    "validate:background": "node scripts/validate-background.mjs",
+    "validate:theology": "node scripts/validate-theology.mjs",
+    "validate:theology:draft": "node scripts/validate-theology.mjs --allow-pending-review",
+    "validate:humanization": "node scripts/validate-humanization.mjs",
+    "audit:copying": "python3 scripts/audit-copying.py",
+    "validate": "npm run validate:content && npm run validate:background && npm run validate:theology && npm run validate:humanization",
+    "generate:reference-previews": "node scripts/generate-reference-previews.mjs",
+    "build:intake": "node scripts/build-intake.mjs",
+    "research:ingest": "python3 scripts/ingest-library.py",
+    "research:search": "python3 scripts/search-library.py",
+    "deploy:check": "npm run validate && npm run typecheck && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "latest",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwind-merge": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@next/swc-wasm-nodejs": "^16.2.6",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "^10.5.0",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.17",
+    "typescript": "latest"
+  }
+}
