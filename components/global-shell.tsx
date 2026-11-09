@@ -4,6 +4,7 @@ const libraryItems = [
   { name: "Daniel", description: "Prophecy and providence", href: "https://daniel.mybibleexplorer.com", category: "book" },
   { name: "Ephesians", description: "Grace, unity, new life, and spiritual warfare", href: "https://ephesians.mybibleexplorer.com/", category: "book" },
   { name: "Galatians", description: "Freedom in Christ and life by the Spirit", href: "https://galatians.mybibleexplorer.com/", category: "book" },
+  { name: "Genesis", description: "Creation, the fall, the flood, and the promise to Abraham", href: "https://genesis.mybibleexplorer.com/", category: "book" },
   { name: "Hebrews", description: "Christ, covenant, sanctuary, and persevering faith", href: "https://hebrews.mybibleexplorer.com/", category: "book" },
   { name: "Isaiah", description: "Judgment, comfort, and gospel hope", href: "https://isaiah.mybibleexplorer.com/", category: "book" },
   { name: "James", description: "Living faith, wisdom, speech, patience, and prayer", href: "https://james.mybibleexplorer.com/", category: "book" },
