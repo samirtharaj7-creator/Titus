@@ -8,6 +8,7 @@ import "./global-shell.css";
 import "./titus-illustrated.css";
 import "./background-content.css";
 import "./titus-reader.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteHeader />
         {children}
         <GlobalFooter />
+        <Script src="https://mybibleexplorer.com/library.js" strategy="afterInteractive" />
       </body>
     </html>
   );
