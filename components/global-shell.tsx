@@ -1,34 +1,3 @@
-const libraryItems = [
-  { name: "Genesis", description: "Creation, the fall, the flood, and the promise to Abraham", href: "https://genesis.mybibleexplorer.com/", category: "book" },
-  { name: "Psalms", description: "Worship, lament, praise, and prayer", href: "https://psalms.mybibleexplorer.com", category: "book" },
-  { name: "Isaiah", description: "Judgment, comfort, and gospel hope", href: "https://isaiah.mybibleexplorer.com/", category: "book" },
-  { name: "Daniel", description: "Prophecy and providence", href: "https://daniel.mybibleexplorer.com", category: "book" },
-  { name: "Romans", description: "Righteousness by faith and life in the Spirit", href: "https://romans.mybibleexplorer.com", category: "book" },
-  { name: "Corinthians", description: "Unity, worship, holy living, and resurrection", href: "https://corinthians.mybibleexplorer.com/", category: "book" },
-  { name: "Galatians", description: "Freedom in Christ and life by the Spirit", href: "https://galatians.mybibleexplorer.com/", category: "book" },
-  { name: "Ephesians", description: "Grace, unity, new life, and spiritual warfare", href: "https://ephesians.mybibleexplorer.com/", category: "book" },
-  { name: "Philippians", description: "Joy, humility, perseverance, and contentment", href: "https://philippians.mybibleexplorer.com/", category: "book" },
-  { name: "Colossians", description: "The supremacy of Christ and life in Him", href: "https://colossians.mybibleexplorer.com/", category: "book" },
-  { name: "Thessalonians", description: "Hope, holiness, and the Lord's return", href: "https://thessalonians.mybibleexplorer.com/", category: "book" },
-  { name: "1 & 2 Timothy", description: "Sound teaching, faithful leaders, and finishing the race", href: "https://timothy.mybibleexplorer.com/", category: "book" },
-  { name: "Titus", description: "Grace that teaches and good works that adorn the gospel", href: "/", category: "book", current: true },
-  { name: "Philemon", description: "Love, appeal, and reconciliation in Christ", href: "https://philemon.mybibleexplorer.com/", category: "book" },
-  { name: "Hebrews", description: "Christ, covenant, sanctuary, and persevering faith", href: "https://hebrews.mybibleexplorer.com/", category: "book" },
-  { name: "James", description: "Living faith, wisdom, speech, patience, and prayer", href: "https://james.mybibleexplorer.com/", category: "book" },
-  { name: "Peter", description: "Living hope, suffering, and the sure word of prophecy", href: "https://peter.mybibleexplorer.com/", category: "book" },
-  { name: "Letters of John", description: "Fellowship, love, truth, and assurance", href: "https://johnletters.mybibleexplorer.com/", category: "book" },
-  { name: "Jude", description: "Contending for the faith and kept by God", href: "https://jude.mybibleexplorer.com/", category: "book" },
-  { name: "Revelation", description: "Symbols, judgment, and final hope", href: "https://revelation.mybibleexplorer.com/", category: "book" },
-  { name: "Ask Ellen White", description: "Her writings, quoted word for word", href: "https://askew.mybibleexplorer.com/", category: "topic" },
-  { name: "Find Your Way Home", description: "A thirteen-step journey through Steps to Christ", href: "https://stc.mybibleexplorer.com/", category: "topic" },
-  { name: "Hermeneutics", description: "Learn to read Scripture faithfully", href: "https://hermeneutics.mybibleexplorer.com", category: "topic" },
-  { name: "Last Day Events", description: "Earth's final chapter", href: "https://lastdayevents.mybibleexplorer.com/index.html", category: "topic" },
-  { name: "Life of Christ", description: "The life and ministry of Jesus", href: "https://christ.mybibleexplorer.com/", category: "topic" },
-  { name: "Parables", description: "Stories of the kingdom", href: "https://parables.mybibleexplorer.com", category: "topic" },
-  { name: "Salvation", description: "Righteousness by faith, justification, and assurance", href: "https://salvation.mybibleexplorer.com/", category: "topic" },
-  { name: "Sanctuary", description: "A blueprint of salvation", href: "https://sanctuary.mybibleexplorer.com/#structure", category: "topic" },
-] as const;
-
 export function GlobalShell() {
   return (
     <header className="mbe-global-shell" data-tool="titus" data-embedded="true">
@@ -49,21 +18,13 @@ export function GlobalShell() {
                 <section className="mbe-library-group" aria-labelledby="mbe-books-heading">
                   <p className="mbe-library-heading" id="mbe-books-heading">Books of the Bible</p>
                   <div className="mbe-library-grid mbe-library-grid-books">
-                    {libraryItems.filter((item) => item.category === "book").map((item) => (
-                      <a key={item.name} className="mbe-library-item" href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>
-                        <span className="mbe-library-name">{item.name}</span>
-                      </a>
-                    ))}
+                    {/* Filled by the shared menu at https://mybibleexplorer.com/library.js */}
                   </div>
                 </section>
                 <section className="mbe-library-group" aria-labelledby="mbe-topics-heading">
                   <p className="mbe-library-heading" id="mbe-topics-heading">Topics</p>
                   <div className="mbe-library-grid mbe-library-grid-topics">
-                    {libraryItems.filter((item) => item.category === "topic").map((item) => (
-                      <a key={item.name} className="mbe-library-item" href={item.href} aria-current={"current" in item && item.current ? "page" : undefined}>
-                        <span className="mbe-library-name">{item.name}</span>
-                      </a>
-                    ))}
+                    {/* Filled by the shared menu at https://mybibleexplorer.com/library.js */}
                   </div>
                 </section>
               </div>
